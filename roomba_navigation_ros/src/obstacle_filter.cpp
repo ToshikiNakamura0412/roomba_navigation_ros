@@ -5,6 +5,8 @@
  * @copyright Copyright (c) 2024
  */
 
+#include <vector>
+
 #include <pcl_ros/point_cloud.h>
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
