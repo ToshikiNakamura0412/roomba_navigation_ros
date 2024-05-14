@@ -1,0 +1,9 @@
+- git:
+    local-name: amr_navigation_ros
+    uri: https://github.com/ToshikiNakamura0412/amr_navigation_ros.git
+    version: master
+
+- git:
+    local-name: Roomba
+    uri: https://github.com/amslabtech/Roomba.git
+    version: master
