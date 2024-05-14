@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="obstacle_filter_config" default="$(find roomba_navigation_ros)/launch/obstacle_filter.yaml"/>
+    <arg name="cloud_in_topic" default="/cloud_in"/>
+    <arg name="cloud_out_topic" default="/cloud_out"/>
+    <arg name="output" default="log" doc="[screen, log]"/>
+
+    <node pkg="roomba_navigation_ros" type="obstacle_filter_node" name="obstacle_filter" output="$(arg output)">
+        <rosparam command="load" file="$(arg obstacle_filter_config)"/>
+        <remap from="/cloud_in" to="$(arg cloud_in_topic)"/>
+        <remap from="/cloud_out" to="$(arg cloud_out_topic)"/>
+    </node>
+</launch>

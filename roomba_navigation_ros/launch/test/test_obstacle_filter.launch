@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="rviz_path" default="$(find roomba_navigation_ros)/launch/test/rviz.rviz"/>
+
+    <include file="$(find roomba_navigation_ros)/launch/obstacle_filter.launch">
+        <arg name="cloud_in_topic" value="/cloud"/>
+        <arg name="output" value="screen"/>
+    </include>
+
+    <include file="$(find scan_to_pcl_ros)/launch/scan_to_pcl.launch">
+        <arg name="frame_id" value="laser"/>
+    </include>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_path)"/>
+</launch>
