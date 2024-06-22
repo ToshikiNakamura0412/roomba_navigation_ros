@@ -1,6 +1,5 @@
 # roomba_navigation_ros
 
-![Build Status](https://github.com/ToshikiNakamura0412/roomba_navigation_ros/workflows/build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A 2D navigation package for Roomba
